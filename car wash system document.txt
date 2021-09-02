@@ -1,0 +1,29 @@
+Topic: On demand car wash system
+
+Targeted Audiences:
+--------------------
+1.People who're willing to opt for car wash services 
+
+
+StakeHolder(Internal,External)
+------------------------------
+1.Founders/shareHolders/of the app
+2.Employees(Includes a admin)
+3.Users
+4.Service Providers
+
+Description:
+---------------------
+Now in this fast moving technological world everything is happening so quickly in a little amount of time,everyone wants to find out new ways to make the things quick and hassle free.
+
+When coming to our topic,a person who's looking for a car washing services need to spend lots of time to search for best and nearest service providers by  reviewing them physically
+to get better idea which is not appropriate and time consuming.
+
+So,we are presenting a On demand car wash System to make it simple for people who are looking for best and nearest service providers without steping them out of there house which is so covenient and hassle free.
+
+We're not attaching any strings(tie-ups) with the service providers the information provided are trustworthy.   
+
+
+Flow of Application:
+
+open the app-> check for nearby car wash service provider->displays the results of service providers->customer click on desired service provider->(request)->application takes the request ->pings the selected service provider->He may reach the customer by call or personal->provides them package of services->customer pays through app->application then make a payment to the service provider after everything is done by cutting the commision
