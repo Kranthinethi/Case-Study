@@ -1,0 +1,129 @@
+<div class="body"><nav class="navbar navbar-expand-lg navbar-light  sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"><span><img src="../../assets/images/icon.jpg" height="53" width="60"></span><strong>GreenWash</strong></a>
+        <button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarsupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsupportedContent">
+            <ul class="navbar-nav ml-3">
+               
+                <li class="nav-item ">
+                    <a   class="nav-link btn btn-success text-white" style="background-color: green;border: none;" >Washer DashBoard&nbsp;&nbsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>   
+<section>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 pl-0 " style="margin-top: 25px;">
+                
+            <ul class="nav nav-pills   ">
+                <li class="nav-item mb-3 ">
+                    <div class="nav-link ">  
+                        <a class="btn btn-success text-white" (click)="displaywashers()" aria-current="page">Profile</a>
+                    </div>
+                </li>
+                <li class="nav-item mb-3">
+                    <div class="nav-link">  
+                        <a class="btn btn-success text-white" (click)="displayorders()" aria-current="page">Current Orders</a>
+                    </div>
+                </li>
+            
+               
+              </ul>
+        </div>
+       
+        <div class="row" [class.d-none]="displayorder">
+        <div class="col-6">
+            <table class="table" >
+                <tbody>
+                    <tr>
+                        <th>OrderID</th>
+                        <th>CustomerId</th>
+                        <th>CustomerEmail</th>
+                        <th>Customername</th>
+                        
+                        
+                    </tr>
+                    <tr *ngFor="let order of orders">
+                       <td>{{order.id}}</td>
+                        <td>{{order.customerId}}</td>
+                        <td>{{order.customeremaiId}}</td>
+                        <td>{{order.customername}}</td>
+                        
+                    </tr>
+                   
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="col-6 ">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>carnumber</th>
+                        <th>carmodel</th>
+                        <th>ServiceOpted</th>
+                        <th>PickUpLocation</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr *ngFor="let order of orders">
+                      
+
+                        <td>{{order.cardetails.carnumber}}</td>
+                         <td>{{order.cardetails.model}}</td>
+                         <td>{{order.cardetails.addonservice}}</td>
+                         <td>{{order.cardetails.location}}</td>
+                         <td>{{order.cardetails.comment}}</td>
+                          <td><a (click)="sendEmail(order.customeremaiId)" class="btn btn-warning btn-sm text-white mr-2">Accept</a></td>
+                       <td><a class="btn btn-outline-dark btn-sm text-dark">Decline</a></td>
+                    </tr>
+                    
+                </tbody>
+                
+            </table>
+            <div class="text-success">  {{message}}</div>
+            
+        </div>
+        
+    </div>
+
+    </div>
+    
+
+</div>
+</section>
+
+
+<div class="col-12" [class.d-none]="displaywasher">
+    <h2 class="display-4">Hello,{{washer.carwashname}}</h2>
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Washer Name</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">Phone</th>
+            
+            <th>Edit</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <th >{{washer.id}}</th>
+            <td>{{washer.carwashname}}</td>
+            <td>{{washer.emailId}}</td>
+            <td>{{washer.phone}}</td>
+            
+            <td><a [routerLink]='["/editwasher",washer.id]' class="btn btn-warning">Edit</a></td>
+              
+          </tr>
+         
+        </tbody>
+      </table>
+      
+</div>
+</div>

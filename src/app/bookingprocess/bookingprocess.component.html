@@ -1,0 +1,56 @@
+<h2>Select a Car Washer</h2>
+
+<table class="table" >
+    <thead>
+      <tr>
+          <th>Selected</th>
+       
+        <th scope="col">Washer Name</th>
+        <th scope="col">Email Id</th>
+        <th>Location</th>
+        <th scope="col">Phone</th>
+        <th>Ratings</th>
+        <th></th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let washer of carwashers">
+      <th ><div class="form-check">
+ 
+            <label class="form-check-label">
+            <input type="radio" class="form-check-input" (change)="radioChange($event)" name="washer" id="{{washer.id}}" value="{{washer.carwashname}}" checked >
+            </label>  </div></th>   
+            <td>{{washer.carwashname}}</td>
+            <td>{{washer.emailId}}</td>
+            <td>{{washer.address}}</td>
+            <td>{{washer.phone}}</td>
+            <td>4.2/5</td>   
+      </tr>    
+    </tbody>
+  </table>
+ <i><p class="text-danger" [class.d-none]="show">You have selected washer: <strong> {{selected}}</strong></p></i>
+
+ <div class="row justify-content-start" [class.d-none]="displaydatetime">
+  <div class="col-md-4">
+         <div class="form-group">
+           <label for="date">Pick a Date</label>
+           <input type="date" name="date" id="date" class="form-control">
+         </div>
+  </div>
+
+  <div class="col-md-4">
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time" class="form-control" >                    
+      </div>
+  </div>
+</div>
+
+
+
+
+<div>
+ <a [routerLink]="['confirmation',selectedId]" class="btn btn-warning mr-3" [class.disabled]="!displaydatetime">Book now</a>
+ <a class="btn btn-success mr-3" (click)="showDateTime()">schedule Later</a>
+ <a  routerLink="['confirmation',{{selectedId}}]" class="btn btn-info"[class.disabled]="displaydatetime">Confirm</a></div>

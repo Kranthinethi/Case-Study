@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="row text-center mb-4 mt-5">
+        <div class="col-12  text-success">
+            <h4>Enter your Car Details</h4>
+            {{response}}
+        </div>
+    </div>
+    <form>
+    <div class="row justify-content-center">
+       
+        <div class="col-md-4">
+                <div class="form-group">
+                  <label for="">CarNumber</label>
+                  <input type="text" name="carno"  #carno="ngModel" [class.is-invalid]="carno.invalid && carno.touched" id="name" [(ngModel)]="cardetails.carnumber" id="carno" class="form-control" placeholder="Enter your car number" aria-describedby="helpId" pattern="(?!\d{4}\b)[A-Z\d]{4,}\b" required>
+                  <small class="text-danger" [class.d-none]="carno.valid || carno.untouched">Please provide the correct CAR NUMBER ex:USA123 </small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="brand">Brand Name</label>
+                    <input type="text" name="brand" #brand="ngModel" [class.is-invalid]="brand.invalid && brand.touched" id="brand"  [(ngModel)]="cardetails.brandname" class="form-control" placeholder="please specify your car brand" aria-describedby="helpId" required>
+                    <small class="text-danger" [class.d-none]="brand.valid || brand.untouched">Please provide Brand Name</small>
+                </div>
+            </div>
+        </div>   
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text"  name="model" #model="ngModel" [class.is-invalid]="model.invalid && model.touched" id="model" [(ngModel)]="cardetails.model" class="form-control" placeholder="please specify your car model" aria-describedby="helpId" required>
+                    <small class="text-danger" [class.d-none]="model.valid || model.untouched">Please provide a Model</small>
+                  </div>
+            </div>
+            <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="category">Category</label>
+                  <div>  <select class="custom-select "  style="
+                    width: 354px; " [(ngModel)]="cardetails.category" #category="ngModel"  (blur)="validateSelect(category.value)" (change)="validateSelect(category.value)"   [class.is-invalid]="selectHasError && category.touched" required  name="category">
+                        <option  value="default">select one from given List</option>
+                        <option  *ngFor="let category of categories" >{{category}}</option>
+                      </select></div>
+                  </div>
+            </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-4">
+                    <label>Upload a Car Image URL</label>
+                    <div class="input-group">
+                        <input type="url" class="form-control" #carphoto="ngModel" [class.is-invalid]="carphoto.invalid && carphoto.touched" [(ngModel)]="cardetails.carphoto" name="carphoto" id="carpicture" aria-describedby="carpicture" aria-label="Upload" required>
+                       <!-- <button class="btn btn-danger btn-sm" type="button" id="inputGroupFileAddon04">Upload</button> -->
+                       <small class="text-danger" [class.d-none]="carphoto.valid || carphoto.untouched">Please provide a Correct Link</small>
+                    
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 ">
+                    <div class="form-group">
+                        <label for="service">Add On Services</label>
+                      <div>  <select class="custom-select " style="
+                        width: 354px; " [(ngModel)]="cardetails.addonservice" #category="ngModel"  (blur)="validateSelect(addonservice.value)" (change)="validateSelect(addonservice.value)"   [class.is-invalid]="selectHasError && addonservice.touched" required #addonservice="ngModel"    name="addonservice">
+                             <option  value="default" >Select Category</option>
+                            <option *ngFor="let service of services" >{{service}}</option>
+                          </select></div>
+                      </div>
+                    </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="brand">Location</label>
+                        <input type="text" name="location" id="location"   #location="ngModel" [class.is-invalid]="location.invalid && location.touched"    required   [(ngModel)]="cardetails.location" class="form-control">               
+                        <small class="text-danger" [class.d-none]="location.valid || location.untouched">Location Can't be Empty</small>
+                        <br><small>Please specify exact location to pickup</small>  </div>                
+                    </div>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="comment"  #comment="ngModel" [class.is-invalid]="comment.invalid && comment.touched"    required    [(ngModel)]="cardetails.comment" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px">                       <label for="floatingTextarea2">Comments</label>
+                        <small class="text-danger" [class.d-none]="comment.valid || comment.untouched">Specifying comments are advisable</small>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="row mt-4  justify-content-center">
+
+                <div class=" d-grid col-md-2  mb-sm-3  mb-3 ">
+                    <a (click)="onSubmit(cardetails)" class="btn btn-success text-white ">Save</a> 
+                 </div>
+                 <div class=" d-grid col-md-2 mb-sm-3 mb-3 ">
+                    
+                    <a [routerLink]="['selectwasher',cardetails.carnumber]" type="reset" class="btn btn-info" [class.disabled]="disable" >Book Now</a>  
+                </div>
+    
+                   <div class=" d-grid col-md-2 mb-sm-3 mb-3 ">
+                       <a  routerLink="/homepage" class="btn btn-warning  ">Go Back</a>  
+                   </div>
+                   <div class=" d-grid col-md-2 mb-sm-3 mb-3 ">
+                    
+                    <button type="reset" class="btn btn-outline-secondary">Reset</button>  
+                </div>
+
+               </div>
+
+          
+         
+    </form>
+    
+</div>
+
+

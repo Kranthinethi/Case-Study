@@ -1,0 +1,54 @@
+
+
+<div class="container-fluid"> 
+    <div class="row ">
+     <div class="col-md-5 d-none d-md-block d-md-none mt-5">
+          <img src="../../assets/images/icon.jpg" class="img-fluid">
+     </div>
+      <div class="col-md-4 ">
+        <div class="h4 text-primary mt-5 mb-3  ">Edit Details</div> <div [class.d-none]="haserror" class="message text-white mb-2 pt-1">{{message}}
+          
+        </div>
+        <form  #userdetails="ngForm">
+            <div class="form-group mb-2">
+              <label for="username">Enter CarwashName</label>
+              <input type="text" name="username" #username="ngModel" [class.is-invalid]="username.invalid && username.touched" id="name" [(ngModel)]="washer.carwashname" class="form-control" required> 
+              <small class="text-danger" [class.d-none]="username.valid || username.untouched">Please provide your Name</small>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" [(ngModel)]="washer.emailId" #email="ngModel" [class.is-invalid]="email.invalid && email.touched"  class="form-control" required> 
+                <!-- <small class="text-danger" [class.d-none]="!haserror">{{errormsg}}</small><br> -->
+                <small class="text-danger" [class.d-none]="email.valid || email.untouched">Please provide your email</small>
+              </div>
+
+              <div class="form-group mb-2">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" #pass [(ngModel)]="washer.password" name="pass" id="pass" required>
+              </div>
+
+              <div class="form-group mb-2">
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" class="form-control" name="cpass" #cpass    id="cpass" required>
+               <small class="text-danger">{{passwordValidation}}</small>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="address">Enter your Address</label>
+                <input type="text" name="address" #address="ngModel" [class.is-invalid]="address.invalid && address.touched" id="address" [(ngModel)]="washer.address" class="form-control" required> 
+                <small class="text-danger" [class.d-none]="address.valid || address.untouched">Please specify address</small>
+              </div>
+              <div class="form-group mb-2">
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched" id="phone" [(ngModel)]="washer.phone" class="form-control" required> 
+                <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Please specify your phone number</small>
+              </div>
+              <button type="submit" [disabled]="userdetails.form.invalid" class="btn btn-primary" (click)="update(pass.value,cpass.value)">Update</button>    
+              <a routerLink="/userlogin" class="btn btn-dark ml-2" >Go back</a> 
+            </form>
+        
+    </div>
+    </div>
+    
+</div>

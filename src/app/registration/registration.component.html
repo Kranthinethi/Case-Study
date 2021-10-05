@@ -1,0 +1,54 @@
+
+<div class="container-fluid"> 
+    <div class="row ">
+     <div class="col-md-5 d-none d-md-block d-md-none mt-5">
+          <img src="../../assets/images/icon.jpg" class="img-fluid">
+     </div>
+      <div class="col-md-4 ">
+        <div class="h4 text-primary mt-5 mb-3  ">SignUp</div> <div [class.d-none]="haserror" class="message text-white mb-2 pt-1">{{message}}
+          
+        </div>
+        <form  #userdetails="ngForm">
+            <div class="form-group mb-2">
+              <label for="username">Enter your Name</label>
+              <input type="text" name="name" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" id="name" [(ngModel)]="user.username" class="form-control" pattern="[A-Za-z]{1,32}" required size="20"> 
+              <small class="text-danger" [class.d-none]="name.valid || name.untouched">Please provide the correct Name</small>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" [(ngModel)]="user.emailId" #email="ngModel" [class.is-invalid]="email.invalid && email.touched"  class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" > 
+                <!-- <small class="text-danger" [class.d-none]="!haserror">{{errormsg}}</small><br> -->
+                <small class="text-danger" [class.d-none]="email.valid || email.untouched">Please provide your correct email</small>
+              </div>
+
+              <div class="form-group mb-2">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" #pass="ngModel" [class.is-invalid]="pass.invalid && pass.touched" [(ngModel)]="user.password" name="pass" id="pass"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"    required>
+                  <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Please provide your correct password<br>It should contain atleast<br> 1 lower case<br> 1 upper case<br>atleast One Special character[!@#$%^&*_=+-]<br>Minimum 8 and Max 12 characters </small>
+                </div>
+
+              <div class="form-group mb-2">
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" class="form-control" name="cpass" #cpass   id="cpass" required>
+               <small class="text-danger">{{passwordValidation}}</small>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="address">Enter your Address</label>
+                <input type="text" name="address" #address="ngModel" [class.is-invalid]="address.invalid && address.touched" id="address" [(ngModel)]="user.address" class="form-control" required> 
+                <small class="text-danger" [class.d-none]="address.valid || address.untouched">Please specify address</small>
+              </div>
+              <div class="form-group mb-2">
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched" id="phone" [(ngModel)]="user.phone" class="form-control" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" required> 
+                <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Please specify your correct phone number</small>
+              </div>
+              <button type="submit" [disabled]="userdetails.form.invalid" class="btn btn-primary" (click)="register(pass.value,cpass.value)">Confirm</button>    
+              <a routerLink="/homepage" class="btn btn-dark ml-2" >Go back</a> 
+            </form>
+        
+    </div>
+    </div>
+    
+</div>

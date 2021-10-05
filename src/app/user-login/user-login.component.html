@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 mt-5">
+            <h2>Login!</h2>
+          
+        </div>
+    </div>
+   
+    <div class="row justify-content-center">
+       
+      <div class="col-md-6 p-3" style="background-color: rgba(0, 255, 179, 0.137);">
+        <form>
+            <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" class="form-control" [(ngModel)]="userEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <small class="text-danger" [class.d-none]="email.valid || email.untouched">Please provide your correct email</small>
+                <small>{{message}}</small> 
+              </div>
+
+              <div class="form-group mb-3">
+                  <label for="password">Password</label>
+                  <input type="password" #pass="ngModel" [class.is-invalid]="pass.invalid && pass.touched" class="form-control" placeholder="password"  name="pass" id="pass" [(ngModel)]="userPass" required>
+                  <small class="text-danger" [class.d-none]="pass.valid || pass.untouched">Please provide your correct password</small>
+                </div>  
+              <a type="submit" (click)="login()" class="btn btn-success ">Login</a>  
+              <a routerLink="/homepage" class="btn btn-dark ml-3 text-white">Cancel</a>          
+        </form>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <strong>Not have an account?Create One
+                </strong>
+            <div class="register"><a  routerLink="/register" class="btn btn-warning btn-sm">Register</a></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+</div>

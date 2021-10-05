@@ -1,0 +1,81 @@
+
+<nav class="navbar navbar-expand-lg navbar-light  sticky-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><span><img src="../../assets/images/icon.jpg" height="53" width="60"></span><strong>GreenWash</strong></a>
+      <button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarsupportedContent">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                  <a href="#" class="nav-link">Home <i class="fa fa-home" aria-hidden="true"></i></a>
+              </li>
+              <li class="nav-item ">
+                  <a href="#services" class="nav-link">Services  <i class="fa fa-cogs" aria-hidden="true"></i></a>
+              </li>
+              <li class="nav-item ">
+                  <a href="#aboutus" class="nav-link">About Us <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+              </li>
+             
+              
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle"   id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Login/SignUp&nbsp;&nbsp;<i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #97c13c;">
+                      <li><a class="dropdown-item"routerLink="/userlogin">User</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" routerLink="/adminlogin">Admin</a></li>
+                    <li><a class="dropdown-item" routerLink="/washerlogin">Washer</a></li>
+                    
+                   
+                  </ul>
+                </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid">
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-6">
+        <h4 class="text-success">Dear Customer,you're request has been successfully completed.</h4></div>
+     
+     
+    <div class="row justify-content-center mb-3 ">
+        <div class="col-6 align-items-center"><i style="margin-left: 220px;">Kindly wait for the washer acceptance</i></div>
+       </div> 
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class=col-6>
+                <div>Order Summary</div>
+              <table class="table table-info table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Serive Choosed</th>
+                    <th scope="col">Location pickup</th>
+                    <th scope="col">Washer Name</th>
+                    <th scope="col">Washer Phone Number</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">{{order.cardetails.addonservice}}</th>
+                    <td>{{order.cardetails.location}}</td>
+                    <td>{{order.washer.carwashname}}</td>
+                    <td>{{order.washer.phone}}</td>        
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="row justify-content-center ml-2 mt-5">
+        <div class="col-2">
+          <a class="btn btn-info" href="/paymentgateway">Pay Now<span><i class="fa fa-rocket" aria-hidden="true"></i></span></a>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@600;800&display=swap');
+
+.navbar{
+    background-color: #ffffff !important;
+    border: 3px solid rgba(21, 255, 0, 0.082) ;
+    border-radius: 5px;
+}
+ .navbar-nav .nav-link,.navbar-brand{
+    color:#97c13c;
+    font-family: 'Stick No Bills', sans-serif;
+}
+.navbar-toggler {
+    border-color: #a9e032;
+  } 
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(151,193,60, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+.landingImage{
+    border:10px solid red;
+
+}
+.calltoaction .btn{
+    background-color:white;
+    border-color: #a9e032;
+    color: black;
+}
+
+
+.jumbotron{
+    background-color:#97c13c81
+}
+.main-string{
+color: white;
+background: #8fc13e;
+width: 343px;
+padding: 5px 0px 7px 2px;
+}

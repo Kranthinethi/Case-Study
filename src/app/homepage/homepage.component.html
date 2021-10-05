@@ -1,0 +1,167 @@
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light  sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"><span><img src="../../assets/images/icon.jpg" height="53" width="60"></span><strong>GreenWash</strong></a>
+        <button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarsupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">Home <i class="fa fa-home" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#services" class="nav-link">Services  <i class="fa fa-cogs" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#aboutus" class="nav-link">About Us <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                </li>
+               
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"   id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Login/SignUp&nbsp;&nbsp;<i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #97c13c;">
+                        <li><a class="dropdown-item"routerLink="/userlogin">User</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" routerLink="/adminlogin">Admin</a></li>
+                      <li><a class="dropdown-item" routerLink="/washerlogin">Washer</a></li>
+                      
+                     
+                    </ul>
+                  </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<!--Hero Heading-->
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md-6 mt-md-5 " >
+              <h1  class="display-3 ml-4" style="color:#97c13c;margin-top: 100px;">Get the service to your <div class="main-string">Door Steps</div></h1>"
+             
+              <div class="calltoaction">
+              <a href="login"  class="btn mt-5  ml-4">Book a Service</a>
+              <a href="/register" class="btn mt-5 ml-3" style="background-color: #97c13c;">Register</a></div>
+        </div>
+
+        <div class="col-md-6 ">
+            <img src="../../assets/images/icon.jpg" width="650px" height="300px" class="img-fluid">
+        </div>  
+    </div>
+</div>
+<hr>
+<!--Services-->
+
+<div class="container-fluid" id="services">
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-2 mt-3 ml-2 ">
+            <h1> Services</h1>
+        </div>
+    </div>
+   
+    <div class="row ">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://media.istockphoto.com/photos/tire-wash-picture-id174942860?k=20&m=174942860&s=612x612&w=0&h=QmWYaD-L1Nk0liWreAS2APkhNyhNVjOXAL2m_9ZKP_M=" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">Basic Service</h5>
+              <ul class="card-text">
+                  <li><p>Includes Exterior car washing</p></li>
+                  <li><p>Interior Vaccum Cleaning</p></li>
+                  <li><p>Steam Wash</p></li>
+              </ul>
+              <a routerLink="/booking" class="btn btn-success">Book Now</a>
+              <button  class="btn btn-warning ml-3">Schedule Later<span class="badge bg-danger ml-2">exclusive</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1575844611398-2a68400b437c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNhciUyMHdhc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Premium Service</h5>
+              <ul class="card-text">
+                <li><p>Includes Exterior and Interior  shampoo washing</p></li>
+                <li><p>Interior vaccum cleaning</p></li>
+                <li><p>Steam Wash</p></li>
+            </ul>
+            <a routerLink="/booking" class="btn btn-success">Book Now</a>
+            <a  class="btn btn-warning ml-3">Schedule Later<span class="badge bg-danger ml-2">exclusive</span></a> 
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://i.pinimg.com/originals/92/8c/18/928c1809c906daad6554d9862e9a641f.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Elite Service</h5>
+                <ul class="card-text">
+                  <li><p>Includes Exterior and Interior  shampoo washing</p></li>
+                  <li><p>Interior vaccum cleaning</p></li>
+                  <li><p>Steam Wash and Ceramic Coating</p></li>
+              </ul>
+              <a routerLink="/booking" class="btn btn-success " >Book Now</a>
+              <a  class="btn btn-warning ml-3">Schedule Later<span class="badge bg-danger ml-2">exclusive</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+<!--About us-->
+<hr>
+<div class="container" id="aboutus">
+    <div class="row justify-content-center ">
+        <div class="col-md-2 ">
+            <h2>About Us</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <p class="lead">Green wash make your washed wherever you are at your conveniance whether its yor home ,salon,office,or any other place,your car wash is just a few steps away
+                    .Few moments spend in signup can save your valuable time.All you need to is just enter your car ,address,and payment details.A washer will come 
+                to your location and give your car a premium wash. </p>
+                <p class="lead"> We provide various services and addons to wipe clean and dress your entire car from inside out.One
+                    of the best parts of the app is,users can even schedule future car wash and give reviews and ratings to washers.
+                </p>
+                <hr class="my-2">
+                <p>More info</p>
+                <p class="lead">
+                    <a class="btn btn-success btn-sm" href="homepage" role="button">View Details</a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!--Footer-->
+<hr>
+<div class="container-fluid">
+    <div class="row">
+   <div class="col-md-5">
+         <h6 style="display: inline;">Social Media Links:</h6>
+         <i class="fa fa-facebook m-2" aria-hidden="true"></i>
+         <i class="fa fa-instagram m-2" aria-hidden="true"></i>
+         <i class="fa fa-twitter m-2" aria-hidden="true"></i>
+         <i class="fa fa-twitch m-2" aria-hidden="true"></i>
+   </div>
+
+   <div class="col-md-4 ">
+        <i class="fa fa-copyright ml-md-5 ml-sm-auto" aria-hidden="true">Copyright 2021</i>
+   </div>
+
+   <div class="col-md-3 ">
+    <img src="../../assets/images/icon.jpg" height="30" width="30"><span><strong>GreenWash</strong></span>
+   </div>
+</div>
+</div>

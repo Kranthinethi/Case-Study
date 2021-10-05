@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="row text-center mb-4 mt-5">
+        <div class="col-12  text-success">
+            <h4>Enter you Car Details</h4>
+        </div>
+    </div>
+    <form>
+    <div class="row justify-content-center">
+       
+        <div class="col-md-4">
+                <div class="form-group">
+                  <label for="">CarNumber</label>
+                  <input type="text" name="carno" id="carno" class="form-control" placeholder="Enter you car number" aria-describedby="helpId">
+                 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="brand">Brand Name</label>
+                    <input type="text" name="brand" id="brand" class="form-control" placeholder="please specify your car brand" aria-describedby="helpId">
+                  </div>
+            </div>
+        </div>   
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text" name="model" id="model" class="form-control" placeholder="please specify your car model" aria-describedby="helpId">
+                  
+                  </div>
+            </div>
+            <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="category">Category</label>
+                  <div>  <select class="custom-select "  style="
+                    width: 354px; ">
+                        <option selected>select one from given List</option>
+                        <option  *ngFor="let category of categories">{{category}}</option>
+                      </select></div>
+                  </div>
+            </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-4">
+                    <label>Upload Picture of Your Car</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control " id="carpicture" aria-describedby="carpicture" aria-label="Upload">
+                       <!-- <button class="btn btn-danger btn-sm" type="button" id="inputGroupFileAddon04">Upload</button> -->
+                      </div>
+                </div>
+
+
+                <div class="col-md-4 ">
+                    <div class="form-group">
+                        <label for="service">Add On Services</label>
+                      <div>  <select class="custom-select "  style="
+                        width: 354px; " >
+                            <option  *ngFor="let service of services">{{service}}</option>
+                          </select></div>
+                      </div>
+                    </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="brand">Location</label>
+                        <input type="text" name="location" id="location" class="form-control">               
+                        <small>Please specify exact location to pickup</small>  </div>                
+                    </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                       <div class="form-group">
+                         <label for="date">Pick a Date</label>
+                         <input type="date" name="date" id="date" class="form-control">
+                       </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="time">Time</label>
+                      <input type="time" name="time" id="time" class="form-control" >                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Comments</label>
+                      </div>
+                </div>
+            </div>
+          
+           <div class="row mt-4  justify-content-center">
+
+            <div class=" d-grid col-md-2  mb-sm-3  ">
+                <a class="btn btn-success text-white ">Schedule</a> 
+             </div>
+
+               <div class=" d-grid col-md-2 mb-sm-3 mb-3 ">
+                
+                   <a  routerLink="/homepage" class="btn btn-warning  ">Go Back</a>  
+               </div>
+               <div class=" d-grid col-md-2 mb-sm-3 mb-3 ">
+                
+                <button type="reset" class="btn btn-outline-secondary">Reset</button>  
+            </div>
+               
+                
+           </div>
+         
+    </form>
+    
+</div>

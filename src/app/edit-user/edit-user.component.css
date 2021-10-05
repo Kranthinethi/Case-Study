@@ -1,0 +1,8 @@
+.message{
+    width: 480px;
+    height: 35px; 
+    font-size: 15px;
+    background: #03eaaa24;
+    text-align: center;
+    color: #00836a!important;
+}

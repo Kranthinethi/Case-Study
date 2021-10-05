@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@600;800&display=swap');
+
+.navbar{
+    background-color: #ffffff !important;
+    border: 3px solid rgba(21, 255, 0, 0.082) ;
+    border-radius: 5px;
+}
+ .navbar-nav .nav-link,.navbar-brand{
+    color:#97c13c;
+    font-family: 'Stick No Bills', sans-serif;
+}
+.navbar-toggler {
+    border-color:white;
+  } 
+
+  section .nav-item .nav-link .btn-success{
+    width: 200px;
+  padding-left: 0px;
+
+}
+.verical{
+    border-left: 6px solid green;
+  height: 100%;
+}
+.btn-success{
+    background-color: green;
+    border: none;
+}
